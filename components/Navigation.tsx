@@ -16,7 +16,7 @@ const routes = [
   { href: "/intake", label: "Intake Form" }
 ];
 
-export function Navigation() {
+export default function Navigation() {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = React.useState(false);
 

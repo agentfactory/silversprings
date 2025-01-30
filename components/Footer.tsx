@@ -1,66 +1,39 @@
 import Link from "next/link";
 import { Facebook, Instagram, Palette } from "lucide-react";
 
-export function Footer() {
+export default function Footer() {
   return (
-    <footer className="bg-gray-50 border-t">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <Palette className="h-6 w-6 text-green-600" />
-              <span className="font-semibold text-lg">Silver Spring Studio</span>
-            </div>
-            <p className="text-sm text-gray-600">
-              A peaceful, welcoming environment dedicated to cultivating a vibrant and inclusive community of artists.
+    <footer className="bg-gray-800 text-white">
+      <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
+            <p className="text-gray-300">
+              123 Silver Springs Blvd<br />
+              Springfield, ST 12345<br />
+              Phone: (555) 123-4567<br />
+              Email: info@silversprings.com
             </p>
           </div>
-          
           <div>
-            <h3 className="font-semibold mb-4">Quick Links</h3>
+            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li><Link href="/" className="text-sm text-gray-600 hover:text-green-600">Home</Link></li>
-              <li><Link href="/about" className="text-sm text-gray-600 hover:text-green-600">About</Link></li>
-              <li><Link href="/services" className="text-sm text-gray-600 hover:text-green-600">Services</Link></li>
-              <li><Link href="/contact" className="text-sm text-gray-600 hover:text-green-600">Contact</Link></li>
+              <li><Link href="/about" className="text-gray-300 hover:text-white">About Us</Link></li>
+              <li><Link href="/services" className="text-gray-300 hover:text-white">Services</Link></li>
+              <li><Link href="/contact" className="text-gray-300 hover:text-white">Contact</Link></li>
             </ul>
           </div>
-          
           <div>
-            <h3 className="font-semibold mb-4">Contact</h3>
-            <ul className="space-y-2 text-sm text-gray-600">
-              <li>Silver Spring Studio</li>
-              <li>(Adjacent to the Silver Spring Barn)</li>
-              <li>1705 Robertson Rd</li>
-              <li>Nepean, ON K2H 8H6</li>
-              <li>Phone: (613) 404-9394</li>
-              <li>Email: silverspringstudio@ocapdd.on.ca</li>
-            </ul>
-          </div>
-          
-          <div>
-            <h3 className="font-semibold mb-4">Studio Hours</h3>
-            <ul className="space-y-2 text-sm text-gray-600">
-              <li>Monday - Friday: 9:00AM - 4:30PM</li>
-              <li>Saturday: Closed</li>
-              <li>Sunday: Closed</li>
-            </ul>
-            <div className="mt-6">
-              <h3 className="font-semibold mb-4">Follow Us</h3>
-              <div className="flex space-x-4">
-                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-green-600">
-                  <Facebook className="h-6 w-6" />
-                </a>
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-green-600">
-                  <Instagram className="h-6 w-6" />
-                </a>
-              </div>
+            <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
+            <div className="flex space-x-4">
+              <a href="#" className="text-gray-300 hover:text-white">Facebook</a>
+              <a href="#" className="text-gray-300 hover:text-white">Twitter</a>
+              <a href="#" className="text-gray-300 hover:text-white">LinkedIn</a>
             </div>
           </div>
         </div>
-        
-        <div className="mt-8 pt-8 border-t text-center text-sm text-gray-600">
-          <p>&copy; {new Date().getFullYear()} Silver Spring Studio. All rights reserved.</p>
+        <div className="mt-8 border-t border-gray-700 pt-8 text-center">
+          <p className="text-gray-300">&copy; 2025 Silver Springs. All rights reserved.</p>
         </div>
       </div>
     </footer>
