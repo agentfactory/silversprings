@@ -42,7 +42,7 @@ export default function DonatePage() {
       <div className="bg-teal-50 p-6 rounded-lg mb-8 text-gray-700 leading-relaxed">
         <p>
           Making a gift online is a quick and secure way to ensure that your gift is put to use right away. 
-          Online gifts can be made by credit or debit card. This method is preferred by Beyond 21 since we 
+          Online gifts can be made by credit or debit card. This method is preferred by Silver Springs since we 
           are able to issue automatic electronic tax receipts for gifts over $25, which helps reduce 
           administrative and financial costs on the organization.
         </p>
