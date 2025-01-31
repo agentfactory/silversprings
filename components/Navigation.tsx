@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Palette } from "lucide-react";
+import Image from "next/image";
 
 const routes = [
   { href: "/", label: "Home" },
@@ -33,10 +34,20 @@ export default function Navigation() {
       "fixed top-0 w-full z-50 transition-all duration-200",
       isScrolled ? "bg-white/95 backdrop-blur-sm shadow-sm" : "bg-transparent"
     )}>
-      <nav className="container mx-auto px-4 h-16 flex items-center justify-between">
-        <Link href="/" className="flex items-center space-x-2">
-          <Palette className="h-6 w-6 text-teal-600" />
-          <span className="font-semibold text-lg">Silver Spring Studio</span>
+      <nav className="container mx-auto px-4 h-20 flex items-center justify-between">
+        <Link href="/" className="flex items-center space-x-3 group">
+          <div className="relative w-12 h-12 transition-transform duration-200 group-hover:scale-105">
+            <Image
+              src="/images/logo.svg"
+              alt="Silver Spring Studio Logo"
+              fill
+              className="object-contain"
+              priority
+            />
+          </div>
+          <span className="font-semibold text-lg tracking-tight">
+            Silver Spring Studio
+          </span>
         </Link>
         
         <div className="hidden md:flex items-center space-x-6">
@@ -54,6 +65,9 @@ export default function Navigation() {
               {route.label}
             </Link>
           ))}
+          <Button asChild variant="outline" className="border-teal-600 text-teal-600 hover:bg-teal-50">
+            <Link href="/donate">Donate</Link>
+          </Button>
           <Button asChild variant="default" className="bg-teal-600 hover:bg-teal-700">
             <Link href="/contact">Join Us</Link>
           </Button>

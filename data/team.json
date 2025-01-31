@@ -1,0 +1,11 @@
+{
+  "team": [
+    {
+      "id": "1",
+      "name": "Jane Doe",
+      "role": "Program Director",
+      "bio": "Jane brings over 15 years of experience in creative arts therapy and program management.",
+      "image": "/images/team/jane-doe.jpg"
+    }
+  ]
+}

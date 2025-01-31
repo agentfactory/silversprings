@@ -33,7 +33,13 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-8 border-t border-gray-700 pt-8 text-center">
-          <p className="text-gray-300">&copy; 2025 Silver Springs. All rights reserved.</p>
+          <Link 
+            href="/donate"
+            className="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-200"
+          >
+            Support Our Program - Donate Now
+          </Link>
+          <p className="text-gray-300 mt-4">&copy; 2025 Silver Springs. All rights reserved.</p>
         </div>
       </div>
     </footer>
