@@ -1,0 +1,70 @@
+import { Button } from "@/components/ui/button";
+import { Heart, ArrowRight } from "lucide-react";
+import { site } from "@/lib/content";
+
+export function Hero() {
+  return (
+    <section className="relative overflow-hidden">
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute inset-0 bg-gradient-to-br from-cream via-cream to-sage-50" />
+        <div className="absolute -top-40 -right-20 h-[520px] w-[520px] rounded-full bg-terracotta-100/60 blur-3xl" aria-hidden />
+        <div className="absolute -bottom-40 -left-10 h-[420px] w-[420px] rounded-full bg-sage-100 blur-3xl" aria-hidden />
+      </div>
+
+      <div className="mx-auto max-w-7xl px-5 lg:px-8 pt-16 pb-20 lg:pt-28 lg:pb-32 grid lg:grid-cols-[1.15fr_1fr] gap-12 lg:gap-16 items-center">
+        <div>
+          <p className="inline-flex items-center gap-2 text-xs tracking-[0.2em] uppercase font-medium text-sage-700 bg-sage-100 px-3 py-1.5 rounded-full">
+            <span className="h-1.5 w-1.5 rounded-full bg-sage-500 animate-pulse" aria-hidden />
+            An Ottawa-Carleton artist community
+          </p>
+          <h1 className="mt-6 font-serif text-5xl sm:text-6xl lg:text-[4.5rem] leading-[0.98] tracking-[-0.02em] text-ink">
+            Creativity doesn&rsquo;t have an <em className="text-terracotta-600 font-serif not-italic" style={{ fontStyle: "italic" }}>age limit</em>.
+            <br />Or a <em className="text-sage-700 font-serif" style={{ fontStyle: "italic" }}>diagnosis</em>.
+          </h1>
+          <p className="mt-6 text-lg lg:text-xl text-ink-soft max-w-xl leading-relaxed">
+            {site.name} is a working studio and farm where adults with developmental
+            disabilities make art, grow food, and build belonging — every single week.
+          </p>
+          <div className="mt-9 flex flex-wrap gap-3">
+            <Button href="/donate" size="lg">
+              <Heart className="h-4 w-4" fill="currentColor" />
+              Support our artists
+            </Button>
+            <Button href="/programs" size="lg" variant="outline">
+              Explore our programs
+              <ArrowRight className="h-4 w-4" />
+            </Button>
+          </div>
+          <p className="mt-6 text-sm text-ink-muted">
+            Every donation over $20 receives a Canadian tax receipt.
+          </p>
+        </div>
+
+        <figure className="relative aspect-[4/5] lg:aspect-[5/6] rounded-[2rem] overflow-hidden shadow-warm rotate-[1.5deg]">
+          <div className="absolute inset-0 bg-gradient-to-br from-sage-300 via-sage-500 to-sage-700" />
+          <svg
+            className="absolute inset-0 w-full h-full mix-blend-overlay opacity-60"
+            viewBox="0 0 400 500"
+            preserveAspectRatio="xMidYMid slice"
+            aria-hidden
+          >
+            <defs>
+              <radialGradient id="sun" cx="75%" cy="25%" r="50%">
+                <stop offset="0%" stopColor="#f5d9c9" stopOpacity="1" />
+                <stop offset="100%" stopColor="#f5d9c9" stopOpacity="0" />
+              </radialGradient>
+            </defs>
+            <rect width="400" height="500" fill="url(#sun)" />
+            <circle cx="300" cy="110" r="55" fill="#f2ebdb" opacity="0.9" />
+            <path d="M0 380 Q 100 340 200 370 T 400 360 L 400 500 L 0 500 Z" fill="#2b3a21" opacity="0.55" />
+            <path d="M0 420 Q 120 390 240 410 T 400 410 L 400 500 L 0 500 Z" fill="#22201d" opacity="0.65" />
+          </svg>
+          <figcaption className="absolute bottom-5 left-5 right-5 bg-cream/90 backdrop-blur rounded-2xl p-4 text-sm text-ink-soft">
+            <strong className="text-ink font-medium">At the farm, spring 2024.</strong> Placeholder
+            imagery. TODO: replace with consented participant photography.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+  );
+}
