@@ -49,7 +49,7 @@ export const programs: Program[] = [
       "All skill levels — from first brushstroke to exhibition",
       "Finished works can be sold in the Silver Springs shop",
     ],
-    image: "/images/placeholders/arts.jpg",
+    image: "/images/imported/arts.jpg",
     color: "terracotta",
   },
   {
@@ -63,7 +63,7 @@ export const programs: Program[] = [
       "Produce feeds directly into the cooking program",
       "Accessible raised beds and pathways",
     ],
-    image: "/images/placeholders/gardening.jpg",
+    image: "/images/imported/gardening.jpg",
     color: "sage",
   },
   {
@@ -77,7 +77,7 @@ export const programs: Program[] = [
       "Nutrition and food-safety skills",
       "Shared meals are at the heart of our week",
     ],
-    image: "/images/placeholders/cooking.jpg",
+    image: "/images/imported/cooking.jpg",
     color: "sage",
   },
   {
@@ -91,7 +91,7 @@ export const programs: Program[] = [
       "Proceeds split with the artist",
       "New seasonal collections throughout the year",
     ],
-    image: "/images/placeholders/shop.jpg",
+    image: "/images/imported/shop.jpg",
     color: "terracotta",
   },
 ];
@@ -115,7 +115,7 @@ export const stories: Story[] = [
       "Before Silver Springs, I didn't think of myself as an artist. Now I sign my paintings.",
     body:
       "[DRAFT] Maya joined our visual arts program quietly — a few minutes of watching before she picked up a brush. Five years later, her mixed-media landscapes hang in homes across Ottawa, and she mentors newer artists in the studio.",
-    image: "/images/placeholders/story-1.jpg",
+    image: "/images/imported/story-1.jpg",
   },
   {
     slug: "daniel",
@@ -124,7 +124,7 @@ export const stories: Story[] = [
     quote: "The carrots I grew became the soup we shared. That's the best day of the week.",
     body:
       "[DRAFT] Daniel splits his time between the gardens and the kitchen. What started as a way to stay active has become the rhythm of his week — plant, tend, harvest, cook, share.",
-    image: "/images/placeholders/story-2.jpg",
+    image: "/images/imported/story-2.jpg",
   },
   {
     slug: "ellis",
@@ -133,7 +133,7 @@ export const stories: Story[] = [
     quote: "I made something someone else wanted to have. That had never happened to me before.",
     body:
       "[DRAFT] Ellis's handmade cards sold out at our spring market. The feeling of a stranger choosing your work is something he'd never experienced before Silver Springs — and it's changed how he sees himself.",
-    image: "/images/placeholders/story-3.jpg",
+    image: "/images/imported/story-3.jpg",
   },
 ];
 
@@ -155,7 +155,7 @@ export const products: Product[] = [
     artist: "Maya",
     price: "$85",
     medium: "Acrylic on canvas, 12×16",
-    image: "/images/placeholders/artwork-1.jpg",
+    image: "/images/imported/artwork-1.jpg",
     description: "A warm, textured landscape of the farm's back field in October.",
   },
   {
@@ -164,7 +164,7 @@ export const products: Product[] = [
     artist: "Daniel",
     price: "$24",
     medium: "Hand-printed paper, sealed with saved seeds",
-    image: "/images/placeholders/artwork-2.jpg",
+    image: "/images/imported/arts-alt.jpg",
     description: "Printed and packed by hand with heirloom seeds from our gardens.",
   },
   {
@@ -173,7 +173,7 @@ export const products: Product[] = [
     artist: "Ellis",
     price: "$18",
     medium: "5-card set, blank inside",
-    image: "/images/placeholders/artwork-3.jpg",
+    image: "/images/imported/shop.jpg",
     description: "Five original designs printed on recycled card stock.",
   },
   {
@@ -182,7 +182,7 @@ export const products: Product[] = [
     artist: "Studio collaboration",
     price: "$32",
     medium: "Natural cotton, plant-dyed at the farm",
-    image: "/images/placeholders/artwork-4.jpg",
+    image: "/images/imported/community.jpg",
     description: "Dyed with marigolds and onion skins grown on-site.",
   },
 ];

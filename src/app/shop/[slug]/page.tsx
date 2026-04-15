@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
@@ -34,19 +35,15 @@ export default async function ProductPage({ params }: { params: Promise<Params> 
       </Link>
 
       <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
-        <div
-          className="aspect-[4/5] rounded-[2rem] overflow-hidden relative shadow-warm"
-          style={{
-            background: "linear-gradient(140deg, var(--color-sage-300), var(--color-terracotta-500))",
-          }}
-        >
-          <svg viewBox="0 0 400 500" className="absolute inset-0 w-full h-full opacity-80" aria-hidden>
-            <circle cx="200" cy="200" r="130" fill="#faf6ee" opacity="0.7" />
-            <rect x="80" y="320" width="240" height="140" rx="20" fill="#2b3a21" opacity="0.45" />
-          </svg>
-          <p className="absolute bottom-4 left-4 right-4 text-xs text-cream/80 bg-ink/40 rounded-full px-3 py-1.5 backdrop-blur">
-            Placeholder artwork — TODO: replace with real photography
-          </p>
+        <div className="aspect-[4/5] rounded-[2rem] overflow-hidden relative shadow-warm bg-cream-dark">
+          <Image
+            src={p.image}
+            alt={p.title}
+            fill
+            sizes="(min-width: 1024px) 45vw, 90vw"
+            className="object-cover"
+            priority
+          />
         </div>
 
         <div>

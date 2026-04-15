@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Section } from "@/components/site/section";
 import { products } from "@/lib/content";
@@ -27,17 +28,14 @@ export default function ShopIndex() {
           {products.map((p) => (
             <li key={p.slug}>
               <Link href={`/shop/${p.slug}`} className="group block">
-                <div
-                  className="aspect-[4/5] rounded-[1.5rem] overflow-hidden mb-4 relative"
-                  style={{
-                    background:
-                      "linear-gradient(135deg, var(--color-sage-300), var(--color-terracotta-400))",
-                  }}
-                >
-                  <svg viewBox="0 0 400 500" className="absolute inset-0 w-full h-full opacity-80" aria-hidden>
-                    <circle cx="200" cy="200" r="110" fill="#faf6ee" opacity="0.55" />
-                    <rect x="80" y="320" width="240" height="140" rx="16" fill="#2b3a21" opacity="0.4" />
-                  </svg>
+                <div className="aspect-[4/5] rounded-[1.5rem] overflow-hidden mb-4 relative bg-cream-dark">
+                  <Image
+                    src={p.image}
+                    alt={p.title}
+                    fill
+                    sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 90vw"
+                    className="object-cover transition duration-300 group-hover:scale-[1.02]"
+                  />
                   <div className="absolute inset-0 ring-1 ring-inset ring-ink/5 rounded-[1.5rem] group-hover:ring-ink/15 transition" />
                 </div>
                 <div className="flex items-baseline justify-between gap-4">

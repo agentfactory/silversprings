@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Quote } from "lucide-react";
 import { stories } from "@/lib/content";
@@ -8,13 +9,13 @@ export function FeaturedStory() {
     <section className="bg-sage-900 text-cream">
       <div className="mx-auto max-w-7xl px-5 lg:px-8 py-20 lg:py-28 grid lg:grid-cols-[1fr_1.1fr] gap-12 lg:gap-16 items-center">
         <figure className="relative aspect-[4/5] rounded-[2rem] overflow-hidden shadow-warm -rotate-2">
-          <div className="absolute inset-0 bg-gradient-to-br from-terracotta-400 via-terracotta-500 to-terracotta-700" />
-          <svg viewBox="0 0 400 500" className="absolute inset-0 w-full h-full opacity-80" aria-hidden>
-            <circle cx="200" cy="200" r="120" fill="#faf6ee" opacity="0.9" />
-            <circle cx="200" cy="200" r="80" fill="#c26a47" />
-            <rect x="100" y="330" width="200" height="150" rx="20" fill="#8a3f22" opacity="0.85" />
-          </svg>
-          <figcaption className="sr-only">Portrait of {story.name} — placeholder</figcaption>
+          <Image
+            src={story.image}
+            alt={`Portrait of ${story.name}`}
+            fill
+            sizes="(min-width: 1024px) 45vw, 90vw"
+            className="object-cover"
+          />
         </figure>
 
         <div>

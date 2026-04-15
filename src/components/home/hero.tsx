@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Heart, ArrowRight } from "lucide-react";
 import { site } from "@/lib/content";
@@ -41,28 +42,14 @@ export function Hero() {
         </div>
 
         <figure className="relative aspect-[4/5] lg:aspect-[5/6] rounded-[2rem] overflow-hidden shadow-warm rotate-[1.5deg]">
-          <div className="absolute inset-0 bg-gradient-to-br from-sage-300 via-sage-500 to-sage-700" />
-          <svg
-            className="absolute inset-0 w-full h-full mix-blend-overlay opacity-60"
-            viewBox="0 0 400 500"
-            preserveAspectRatio="xMidYMid slice"
-            aria-hidden
-          >
-            <defs>
-              <radialGradient id="sun" cx="75%" cy="25%" r="50%">
-                <stop offset="0%" stopColor="#f5d9c9" stopOpacity="1" />
-                <stop offset="100%" stopColor="#f5d9c9" stopOpacity="0" />
-              </radialGradient>
-            </defs>
-            <rect width="400" height="500" fill="url(#sun)" />
-            <circle cx="300" cy="110" r="55" fill="#f2ebdb" opacity="0.9" />
-            <path d="M0 380 Q 100 340 200 370 T 400 360 L 400 500 L 0 500 Z" fill="#2b3a21" opacity="0.55" />
-            <path d="M0 420 Q 120 390 240 410 T 400 410 L 400 500 L 0 500 Z" fill="#22201d" opacity="0.65" />
-          </svg>
-          <figcaption className="absolute bottom-5 left-5 right-5 bg-cream/90 backdrop-blur rounded-2xl p-4 text-sm text-ink-soft">
-            <strong className="text-ink font-medium">At the farm, spring 2024.</strong> Placeholder
-            imagery. TODO: replace with consented participant photography.
-          </figcaption>
+          <Image
+            src="/images/imported/hero.jpg"
+            alt="Silver Springs studio participants at work"
+            fill
+            sizes="(min-width: 1024px) 45vw, 90vw"
+            className="object-cover"
+            priority
+          />
         </figure>
       </div>
     </section>

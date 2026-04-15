@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { Section } from "@/components/site/section";
@@ -37,10 +38,19 @@ export function ProgramsGrid() {
             )}
           >
             <div>
+              <div className="relative aspect-[4/3] -mx-6 -mt-6 mb-5 overflow-hidden rounded-t-[1.5rem]">
+                <Image
+                  src={p.image}
+                  alt={p.title}
+                  fill
+                  sizes="(min-width: 1024px) 22vw, (min-width: 640px) 45vw, 90vw"
+                  className="object-cover"
+                />
+              </div>
               <div className="text-xs tracking-[0.18em] uppercase font-medium text-ink-muted">
                 0{i + 1}
               </div>
-              <h3 className="mt-6 font-serif text-2xl lg:text-[1.65rem] leading-tight tracking-tight">
+              <h3 className="mt-4 font-serif text-2xl lg:text-[1.65rem] leading-tight tracking-tight">
                 {p.title}
               </h3>
               <p className="mt-3 text-[0.95rem] text-ink-soft leading-snug">{p.tagline}</p>

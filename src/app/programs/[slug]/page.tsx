@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, Check } from "lucide-react";
@@ -40,6 +41,16 @@ export default async function ProgramPage({ params }: { params: Promise<Params> 
         </h1>
         <p className="mt-6 text-2xl text-terracotta-600 font-serif">{p.tagline}</p>
         <p className="mt-6 text-lg text-ink-soft leading-relaxed max-w-3xl">{p.summary}</p>
+        <div className="relative aspect-[16/9] mt-10 rounded-[2rem] overflow-hidden shadow-warm bg-cream-dark">
+          <Image
+            src={p.image}
+            alt={p.title}
+            fill
+            sizes="(min-width: 1024px) 70vw, 90vw"
+            className="object-cover"
+            priority
+          />
+        </div>
       </Section>
 
       <Section className="pt-4">
